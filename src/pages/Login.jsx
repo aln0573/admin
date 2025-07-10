@@ -27,7 +27,7 @@ const Login = () => {
           toast.error(data.message)
         }
       }else {
-        const {data} = await axios.post('http://localhost:4000/api/doctor/login', {email , password})
+        const {data} = await axios.post('https://serenocare.onrender.com/api/doctor/login', {email , password})
         if(data.success){
           localStorage.setItem('dToken', data.token)
           setDToken(data.token)

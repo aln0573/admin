@@ -20,7 +20,7 @@ const DoctorProfile = () => {
       };
 
       const response = await axios.post(
-        'http://localhost:4000/api/doctor/update-doctor',
+        'https://serenocare.onrender.com/api/doctor/update-doctor',
         updateData,
         { headers: { dToken } }
       );
