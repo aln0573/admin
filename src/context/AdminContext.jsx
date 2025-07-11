@@ -16,7 +16,7 @@ const AdminContextProvider = (props) => {
 
     const getAllDoctors = async () => {
         try {
-            const {data} = await axios.post('https://serenocare.onrender.com/api/admin/all-doctors', {}, {headers: {aToken}})
+            const {data} = await axios.post('https://serenocare-backend.onrender.com/api/admin/all-doctors', {}, {headers: {aToken}})
 
             if(data.success){
                 setDoctors(data.doctors)
@@ -47,7 +47,7 @@ const AdminContextProvider = (props) => {
     const getAllAppointments = async () => {
         try {
             
-            const {data} = await axios.get('https://serenocare.onrender.com/api/admin/appointments', {headers: {aToken}})
+            const {data} = await axios.get('https://serenocare-backend.onrender.com/api/admin/appointments', {headers: {aToken}})
 
             if(data.success){
                 setAppointments(data.appointments)
@@ -64,7 +64,7 @@ const AdminContextProvider = (props) => {
     const cancelAppointment = async (appointmentId) => {
         try {
 
-            const {data} = await axios.post('https://serenocare.onrender.com/api/admin/cancel-appointment', {appointmentId}, {headers: {aToken}})
+            const {data} = await axios.post('https://serenocare-backend.onrender.com/api/admin/cancel-appointment', {appointmentId}, {headers: {aToken}})
 
             if(data.success){
                 toast.success(data.message)
@@ -81,7 +81,7 @@ const AdminContextProvider = (props) => {
     const getDashData = async () => {
         try {
 
-            const {data} = await axios.get('https://serenocare.onrender.com/api/admin/dashboard',{headers: {aToken}})
+            const {data} = await axios.get('https://serenocare-backend.onrender.com/api/admin/dashboard',{headers: {aToken}})
             if(data.success){
                 setDashData(data.dashData)
                 console.log(data.dashData)

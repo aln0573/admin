@@ -45,7 +45,7 @@ const AddDoctor = () => {
           console.log(`${key}: ${value}`)
         })
 
-        const {data} = await axios.post('https://serenocare.onrender.com/api/admin/add-doctors', formData, {
+        const {data} = await axios.post('https://serenocare-backend.onrender.com/api/admin/add-doctors', formData, {
           headers: {aToken}
         })
 
